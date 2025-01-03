@@ -27,7 +27,7 @@ public class CategoryController {
     //create
     @PostMapping
     public ResponseEntity<CategoryDto> createCategory(@Valid @RequestBody CategoryDto categoryDto) {
-        //call service to   save object data into the develop branch cccc dndjnlje
+        //call service to   save object data into the develop branch
         CategoryDto categoryDto1 = categoryService.create(categoryDto);
         return new ResponseEntity<>(categoryDto1, HttpStatus.CREATED);
     }
@@ -113,7 +113,7 @@ public class CategoryController {
         System.out.println(helloWorldJava);
         PageableResponse<ProductDto> response = productService.getAllOfCategory(categoryId,pageNumber,pageSize,sortBy,sortDir);
         return new ResponseEntity<>(response, HttpStatus.OK);
-//this code commited to main branch
+
     }
 
 
