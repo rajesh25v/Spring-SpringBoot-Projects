@@ -27,7 +27,7 @@ public class CategoryController {
     //create
     @PostMapping
     public ResponseEntity<CategoryDto> createCategory(@Valid @RequestBody CategoryDto categoryDto) {
-        //call service to   save object
+        //call service to   save object data into the develop branch
         CategoryDto categoryDto1 = categoryService.create(categoryDto);
         return new ResponseEntity<>(categoryDto1, HttpStatus.CREATED);
     }
